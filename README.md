@@ -26,9 +26,9 @@ I hope I didn't make a mistake here.
 
 # Why apache2 ?
 Since docker was not allowed, I had to choose a more classical approche which mean a widely used webserver which left me 3 options
-Ngnix
-SSI (windows server)
-Apache2
+- Ngnix  
+- SSI (windows server)  
+- Apache2  
 SSI and windows server are only use in full microsoft environment so it didn't feel appropriate, so it left only apache & ngnix
 I chose apache2 simply because Im more experienced with it
 
