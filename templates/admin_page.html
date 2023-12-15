@@ -1,0 +1,51 @@
+{% extends "skeleton.html" %}
+
+{% block content %}
+<div id="success"  class="hidden" >
+    <div class="control">
+        <img src="/media/close.svg" alt="delete" onclick="closeSuccessDialog()"/>
+    </div>
+    <span class="hidden" id="success_created">News was successfully created!</span>
+    <span class="hidden" id="success_deleted">News was deleted!</span>
+    <span class="hidden" id="success_edited">News was successfully changed!</span>
+</div>
+<div id="failed"  class="hidden" >
+    <div class="control">
+        <img src="/media/close.svg" alt="delete" onclick="closeSuccessDialog()"/>
+    </div>
+    <span>Something went wrong</span>
+</div>
+
+<h1>All news</h1>
+<div id="articles">
+{% for article in articles %}
+    {% include 'admin_article_mini.html' with {'article':article} %}
+{% endfor %}
+</div>
+
+<form method="post" name="article">
+    <h1 class="creation">Create news</h1>
+    <h1 class="edition hidden">Edit news</h1>
+    <div class="edition_btn_container">
+        <img id="cleanbtn" class="edition hidden" src="/media/close.svg" alt="delete" onclick="clearArticleForm({{article.id}})"/>
+    </div>
+    <input type="hidden" name="id" value=0>
+    <label>
+        <input type="text" name="title" placeholder="Title"/>
+    </label>
+    <br>
+    <label>
+        <textarea placeholder="Description"  name="description"></textarea>
+    </label>
+    <br>
+    <button type="button" onclick="upsertArticle()">
+        <span  class="creation">Create</span>
+        <span class="edition">Edit</span>
+    </button>
+</form>
+<br>
+
+<button type="button" onclick="logout()">
+    Logout
+</button>
+{% endblock %}

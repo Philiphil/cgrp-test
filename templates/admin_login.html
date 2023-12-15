@@ -1,0 +1,26 @@
+{% extends "skeleton.html" %}
+
+{% block content %}
+<div id="failed"
+    {% if err == true %}
+         class="hidden"
+    {% endif %}
+>
+    <div class="control">
+        <img src="/media/close.svg" alt="delete" onclick="closeFailureDialog()"/>
+    </div>
+    <span>Wrong login data</span>
+</div>
+<form method="post" name="login">
+    <label>
+        <input type="text" name="username" placeholder="username"/>
+    </label>
+    <br>
+    <label>
+        <input type="password" name="password" placeholder="password"/>
+    </label>
+    <br>
+    <button type="submit">Send</button>
+</form>
+
+{% endblock %}

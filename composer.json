@@ -1,0 +1,9 @@
+{
+    "require": {
+        "twig/twig": "^v3.8",
+        "doctrine/orm": "^2.17",
+        "symfony/cache": "^6.0",
+        "doctrine/annotations": "^2.0",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

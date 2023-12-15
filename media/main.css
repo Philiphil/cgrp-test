@@ -1,0 +1,127 @@
+html{
+    width: 100%;
+    height: 100%;
+    background-image: url( '/media/waves.svg' );
+}
+
+.edition_btn_container{
+    width: 100%;
+    text-align: right;
+}
+
+body{
+    width: 50%;
+    margin: auto;
+}
+
+#success,#failed{
+    text-align: center;
+    position: relative;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+#success .control,#failed .control{
+    width: 98%;
+    text-align: right;
+    position: absolute;
+}
+#success .control img,#failed .control img {
+    width: 0.75em;
+}
+#success{
+    background: #F6FFF0;
+    border: 1px solid rgba(0,255,0,0.2);
+}
+#success span{
+    color: green;
+}
+
+#failed{
+    background: rgba(255,0,0,0.1);
+    border: 1px solid rgba(255,0,0,0.2);
+}
+
+#failed span{
+    color: indianred;
+}
+
+h1{
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.list_item{
+    display: flex;
+    width: 100%;
+    height: 2em;
+    background: rgba(100,100,100,0.05);
+    border: solid 1px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+}
+
+.list_item > div{
+    display: flex;
+    align-items: center;
+}
+.list_item .title{
+    width: 15%;
+    font-weight: bold;
+    justify-content:   center;
+}
+.list_item .description{
+    width: 70%;
+}
+.list_item .buttons{
+    width: 10%;
+    justify-content:   space-around;
+}
+
+.list_item > div > img{
+    width: 0.75em;
+}
+
+#cleanbtn {
+    height: 1em;
+    width: 1em;
+}
+
+.hidden{
+    display: none;
+}
+
+#logo_container{
+     text-align: center;
+}
+
+#logo{
+    margin: 1em;
+}
+
+input,textarea{
+    width: 100%;
+    height: 2em;
+    background: rgba(100,100,100,0.05);
+    border: solid 1px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+textarea{
+    height: 10em;
+}
+*{
+    color: #16396b;
+}
+
+button{
+    width: 100%;
+    height: 2.5em;
+    background: #16396b;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+button span{
+    color: white;
+}

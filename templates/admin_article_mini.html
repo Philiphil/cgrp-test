@@ -1,0 +1,10 @@
+{% block content %}
+    <div class="list_item" obj="{{article.id}}">
+        <div class="title">{{article.name}}</div>
+        <div class="description">{{article.description}}</div>
+        <div class="buttons">
+            <img src="/media/pencil.svg" alt="edit"  onclick="fillArticleForm({{article.id}})"/>
+            <img src="/media/close.svg" alt="delete" onclick="deleteArticle({{article.id}})"/>
+        </div>
+    </div>
+{% endblock %}
